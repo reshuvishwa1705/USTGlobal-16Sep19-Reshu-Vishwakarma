@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var num=[10,20,30,40];
+        // Named Function
+        function add(){
+            var sum=0;
+            for(var i=0;i<num.length;i++){
+sum=num[i]+sum;
+            }
+            console.log('Sum of array by named function is= ',sum);
+        }
+        add();
+        //Expression Function
+        var a=function(){
+            var sum=0;
+            for(var i=0;i<num.length;i++){
+             sum=num[i]+sum;
+            }
+            console.log('Sum of array by expression function is= ',sum);
+        
+        }
+        a();
+        //Fat Arrow Function
+        var a1=()=>{
+            var sum=0;
+            for(var i=0;i<num.length;i++){
+sum=num[i]+sum;
+            }
+            console.log('Sum of array by Fat Arrow function is= ',sum);
+        }
+a1();
+(
+function(){
+    var sum=0;
+            for(var i=0;i<num.length;i++){
+sum=num[i]+sum;
+            }
+            console.log('Sum of array by named function is= ',sum);
+        
+}
+)();
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

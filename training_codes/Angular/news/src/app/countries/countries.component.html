@@ -1,0 +1,13 @@
+<!-- <input type="text" name="search" id="search" class="form-control col-md-6 offset-3 mt-4 mb-4" (input)="dataInput($event)" placeholder="Enter Something..."> -->
+<select name="" id="" (change)="getCountries($event)" class="form-control col-md-6 offset-3 mt-4 mb-4">
+    <option value="in" >India</option>
+    <option value="us">United State</option>
+    <option value="rs" >Russia</option>
+    <option value="du">Dubai</option>
+</select>
+<div class="container col-md-8 offset-2 card card-body" *ngFor="let get of country">
+    <img src="{{get.urlToImage}}" alt="">
+    <h1>{{get.title}}</h1>
+    </div>
+
+<app-child-countries [getConData]="country"></app-child-countries>

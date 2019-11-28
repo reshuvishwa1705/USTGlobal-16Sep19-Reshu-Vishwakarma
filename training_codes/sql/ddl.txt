@@ -1,0 +1,8 @@
+1)create database database_name;
+2)show database_name;
+3)drop table table_name;
+4)drop database db_name;
+5)create table table_name(col_name datatype,col_name datatype);
+6)alter table table_name add column col_name datatype;
+7)alter table table_name change column old_col_name new_col_name datatype;
+8)rename table old_table_name to new_table_name;

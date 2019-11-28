@@ -1,0 +1,10 @@
+.head h2{
+    margin-top: 50px;
+    margin-left: 350px;
+}
+.head p{
+    margin-top: 10px;
+    margin-left: 400px;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+}

@@ -1,0 +1,7 @@
+5)insert into table_name(col_name1, col_name2...col_namen) values(value1,value2...value_n);
+1)insert into table_name values(value1,value2...value_n);
+2)insert into table_name (col_name1,col_name2) values(value1,value2);
+3)insert into table_name (col_name1,col_name2,col_name3) values(value1,value2,value3),(value1,value2,value3);
+4)update table_name set col_name value;
+5)delete from table_name;
+

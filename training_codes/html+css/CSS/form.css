@@ -1,0 +1,44 @@
+form{
+    border:1px solid black;
+    width:  400px;
+    height: 300px;
+    color: white;
+    margin: 150px 0 0 450px;
+    text-align: center;
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-radius: 25px;
+    background-image: url(/image/Isopoly_01.gif);
+    background-size: cover;
+}
+body{
+background-image:url(/image/wild-flowers-571940__340.jpg);
+background-size: cover;
+}
+input[type="text"],input[type="password"]{
+    width: 225px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50px;
+    text-align: center;
+    
+}
+input[type="text"]:focus,input[type="password"]:focus{
+    outline:none;
+
+}
+
+input[type="submit"]{
+    font-size: 15px;
+    margin: 20px;
+    padding: 10px 35px;
+    border-radius: 50px;
+    background-color: rgba(39, 39, 133);
+    outline: none;
+    color: white;
+
+    
+}
+input[type="submit"]:hover{
+background-color: rgb(102, 102, 173);
+}

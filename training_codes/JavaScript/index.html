@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+    <script>
+        var age=22;
+        console.log('Age='+age);
+        var name='chota Bheem';
+        console.log('name='+name);
+        var hasHobbies=true;
+        console.log('has hobbies='+hasHobbies);
+        var data=null;
+        console.log('Data ='+data);
+        var married;
+        console.log('Married ='+married);
+    </script>
+    <script src='date.js'>
+        
+    </script>
+</head>
+<body>
+    <script>
+        var fruits=['mango','orange','apple'];
+        console.log('Fruits =',fruits[0]);
+        console.log('Size of Fruits='+fruits.length);
+        console.log(fruits);
+
+        var person={
+                        firstName : 'Alia Bhatt',
+                        lastName :'ranbir',
+                        age: 26,
+                        phoneno : 9998088675,
+                        getFullName : function(){
+                            return this.firstName+' '+this.lastName;
+                        
+                        }
+        }
+        var lastn=person.lastName;
+        console.log('Last Name ',lastn);
+        var perage=person.age;
+        console.log('Person age ',perage);
+        var firstn=person.firstName;
+        console.log('Person FirstName',firstn);
+        var fullname=person.getFullName();
+        console.log('Person full name',fullname);
+        console.log('=============================');
+        var a=10;
+        var str='10';
+        //if(a==str)//equal
+       // if(a===str){//not equal
+        if(a!==str){//equal
+            console.log('equal');
+        }
+        else{
+            console.log('not equal');
+        }
+        console.log('=============================');
+        var numberV=20;
+        var str='334';
+        console.log(typeof numberV);
+        console.log(typeof str);
+        console.log(typeof null);
+        console.log(typeof undefined);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+
+        //named function
+        function fact(n1){
+            var fact1=1;
+            for(var i=1;i<=n1;i++){
+                fact1=fact1*i;
+            }
+            return fact1;
+        }
+        var f1=fact(5);
+        console.log("By Named Function "+f1);
+        //expression function
+        var f2=function(n2){
+            var fact2=1;
+            for(var i=1;i<=n2;i++){
+                fact2=fact2*i;
+            }
+            return fact2;
+        }
+       
+        console.log("By Expression Function "+f2(3));
+        //fat arrow function
+     var f3= (n3)=> {
+        var fact3=1;
+            for(var i=1;i<=n3;i++){
+                fact3=fact3*i;
+            }
+            return fact3;
+     }
+     console.log("By Fat Arrow Function "+f3(4));
+(function (n4){
+    var fact4=1;
+            for(var i=1;i<=n4;i++){
+                fact4=fact4*i;
+            }
+           console.log("By Self Invoking Function "+fact4);  
+})
+(2);
+
+    </script>
+    
+</body>
+</html>

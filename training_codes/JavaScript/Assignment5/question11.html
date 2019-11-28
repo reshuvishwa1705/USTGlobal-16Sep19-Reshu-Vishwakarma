@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // Nmaed Function
+        console.log('By Named Function');
+        function prime(n1){
+            var a=0;
+            for(var i=2;i<n1/2;i++){
+                if(n1%i==0){
+                    a++;
+                    break;
+                }
+            }
+            if(a==0){
+                console.log('Number is Prime');
+
+            }
+            else{
+                console.log('Number is Not Prime');
+            }
+        }
+        prime(6);
+        //Expression Function
+        console.log('By Expression Function');
+        var p1=function (n2){
+            var a=0;
+            for(var i=2;i<n2/2;i++){
+                if(n2%i==0){
+                    a++;
+                    break;
+                }
+            }
+            if(a==0){
+                console.log('Number is Prime');
+
+            }
+            else{
+                console.log('Number is Not Prime');
+            }
+        }
+        p1(3);
+        //Fat Arrow Function
+        console.log('By Fat Arrow Function');
+var p=n3=>{
+    var a=0;
+            for(var i=2;i<n3/2;i++){
+                if(n3%i==0){
+                    a++;
+                    break;
+                }
+            }
+            if(a==0){
+                console.log('Number is Prime');
+
+            }
+            else{
+                console.log('Number is Not Prime');
+            }
+}
+p(8);
+//Self Invoking Function
+console.log('By Self Invoking Function');
+(
+    function(n4){
+        var a=0;
+            for(var i=2;i<n4/2;i++){
+                if(n4%i==0){
+                    a++;
+                    break;
+                }
+            }
+            if(a==0){
+                console.log('Number is Prime');
+
+            }
+            else{
+                console.log('Number is Not Prime');
+            }
+    }
+)(7);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,11 @@
+<div class="col-md-8 float-left cazrd card-body">
+    <img src="{{bike.imgUrl}}" alt="" style="height: 550px;">
+    <h3 class="text-center">{{bike.name}}</h3>
+    <div [ngSwitch]=bike.name>
+        <p *ngSwitchCase="'BMW'"><b style="font-size: 20px;">Model : 1945 </b> <br>The Maruti Swift has 1 Diesel Engine and 1 Petrol Engine on offer. The Diesel engine is 1248 cc while the <br> Petrol engine is 1197 cc. Depending upon the variant and fuel type the Swift has a mileage of 22.0 to 28.4 <br>kmpl. The Swift is a 5 seater Hatchback and has a length of 3840mm.</p>
+        <p *ngSwitchCase="'Kawasaki'"><b style="font-size: 20px;">Model : 2015</b> <br> The Mercedes-Benz E-Class has 2 Diesel Engine and 2 Petrol Engine on offer. ... Depending upon the variant <br> and fuel type the E-Class has a mileage of 10.98 to 18.0 kmpl. The E-Class is a 5 seater Sedan and has a length <br> of 4988mm, width of 1907mm and a wheelbase of 2939mm.</p>
+        <p *ngSwitchCase="'RE Interceptor'"><b style="font-size: 20px;">Model : 2010</b> <br> BMW cars price starts at Rs. 35.20 lakh for the cheapest car X1 and goes up to Rs. 2.43 crore for the top <br> model BMW 7 Series. BMW offers 14 new car models in India. X1 (Rs. 35.20 lakh), Z4 (Rs. 64.90 lakh) and 3 <br> Series GT (Rs. 47.70 lakh) are among the popular cars from BMW.</p>
+        <p *ngSwitchCase="'Gixer SF'"><b style="font-size: 20px;">Model : 2010</b> <br>The Lamborghini Swift has 1 Lamborghini Engine and 1 Lamborghini Engine on offer. The Diesel engine is <br> 5000 cc while the Petrol engine is 5000 cc. Depending upon the variant and fuel type the Swift has a mileage <br> of 3.0 to 5.0 kmpl. The Swift is a 5 seater Hatchback and has a length of 5000.</p>
+
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("By Named Function");
+        function fab(num1){
+            var n1=0,n2=1,n3=0;
+            console.log(n1);
+                console.log(n2);
+            for(var i=1;i<num1-1;i++){
+                  n3=n1+n2;
+                console.log(n3);
+                n1=n2;
+                n2=n3;
+                    
+            }
+        }
+        fab(5);
+        console.log("By Expression Function ");
+       var f2=function(num2){
+            var n1=0,n2=1,n3=0;
+            console.log(n1);
+                console.log(n2);
+            for(var i=1;i<num2-1;i++){
+                  n3=n1+n2;
+                console.log(n3);
+                n1=n2;
+                n2=n3;
+                    
+            }
+       }
+       f2(5);
+       console.log("By Fat Arrow Function ");
+          //fat arrow function
+     var f3= (num3)=> {
+        var n1=0,n2=1,n3=0;
+            console.log(n1);
+                console.log(n2);
+            for(var i=1;i<num3-1;i++){
+                  n3=n1+n2;
+                console.log(n3);
+                n1=n2;
+                n2=n3;
+                    
+            }
+     }
+    f3(5);
+    console.log("By Self Invoking Function ");  
+
+(function (num4){
+    var n1=0,n2=1,n3=0;
+            console.log(n1);
+                console.log(n2);
+            for(var i=1;i<num4-1;i++){
+                  n3=n1+n2;
+                console.log(n3);
+                n1=n2;
+                n2=n3;
+                    
+            }
+})
+(5);
+
+    </script>
+    
+</body>
+</html>

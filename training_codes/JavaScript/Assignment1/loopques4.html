@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            var a=[10,40,50,20,60,30,90,80,50,30,71,20,50];
+       for(var i in a){
+           console.log(a[i]);
+       }
+       console.log("Find Duplicate Number In array");
+       var dummy=new Array();
+       var dum=0;
+       for(var i=0;i<a.length-1;i++){
+           for(var j=i+1;j<a.length;j++){
+               if(a[i]===a[j]){
+                   dummy[dum++]=a[i];
+                   for(var k=0;k<dummy.length;k++){
+if(dummy[k]!==a[i]){
+    console.log(a[i]);
+}
+                   }
+                  
+               }
+           }
+       }
+       console.log("Find biggest number in array");
+       var n=a[0];
+       for(var i in a){
+if(n<a[i]){
+    n=a[i];
+}
+       }
+       console.log("Biggest number in array is ",n);
+       console.log("Find second biggest number in array");
+       var f=a[0],s=0;
+       for(var i in a){
+if(f<a[i]){
+f=a[i];
+}
+if(s<a[i] && f!=a[i]){
+    s=a[i];
+}
+       }
+       console.log("Second Biggest Number in array is "+s);
+       console.log(" Find Smallest number in Array");
+       var sm=a[0];
+       for(var i in a){
+           if(sm>a[i]){
+sm=a[i];
+           }
+       }
+       console.log("Smallest number in array is "+sm);
+       console.log("Find Multiple duplicates in array");
+       var count=0;
+       for(var i=0;i<a.length-1;i++){
+for(var j=i+1;j<a.length;j++){
+    if(a[i]==a[j]){
+        count++;
+    }
+        }
+        if(count>=2){
+console.log("Multiple duplicate in array number is",a[i]);
+}
+       }
+       console.log("Find Even number in array");
+       console.log("Even number in array are");
+       for(var i=0;i<a.length;i++){
+           if(a[i]%2==0){
+console.log(a[i]);
+       }
+    }
+    console.log("Find odd number in array ");
+    console.log("Odd number in array are");
+    for(var i=0;i<a.length;i++){
+if(a[i]%2!=0){
+    console.log(a[i]);
+}
+    }
+   console.log("Find element that is not repeated in array");
+   console.log("Not repeated elements are");
+   var dummy2=new Array();
+       var dum2=0;
+       for(var i=0;i<a.length-1;i++){
+           for(var j=i+1;j<a.length;j++){
+               if(a[i]===a[j]){
+                   dummy2[dum2++]=a[i];
+                  
+               }
+           }
+       }
+       var c=0;
+       for(var k=0;k<a.length;k++,c=0){
+        for(var j=0;j<dummy2.length;j++){
+            if(dummy2[j]==a[k]){
+                c++;
+            }
+       }
+       if(c==0){
+console.log(a[k]);
+       }
+    }
+    console.log("Sort the array");
+    console.log("Sorted array is ");
+    var temp=0;
+ for(var i=0;i<a.length-1;i++){
+     for(var j=i+1;j<a.length;j++){
+if(a[i]<a[j]){
+    temp=a[i];
+    a[i]=a[j];
+    a[j]=temp;
+}
+     }
+ }
+ for(var i=0;i<a.length;i++){
+     console.log(a[i]);
+ }
+ let ob1=[10,50,60,30,80,44,55,66,33];
+ 
+        </script>
+</body>
+</html>

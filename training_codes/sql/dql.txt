@@ -1,0 +1,49 @@
+1)select distinct col_name from table_name;
+2)select col_name as alias_name from table_name;
+or
+select col_name alias_name from table_name;
+3)select * from table_name
+where condition;
+4)update table_name set col_name=value
+where condition;
+5)delete from emp
+where condition;
+
+
+AIRTHMETIC OPERATORS :-
+
+6)WAQ to display the salary of employee that is incremented by 5000.
+select salary+5000 incremented_sal from emp;
+
+7)WAQ to display the annual salary of employee;
+select salary*12 annual_sal from emp;
+
+8)WAQ to display the annual salary of employee;
+select salary/30 per_day_sal from emp;
+
+RELATIONAL OPERATORS :-
+
+9)WAQ to display the result whose designation is s/w developer.
+select designation from emp where designation='software developer';
+
+10)WAQ to display the result excluding who areworking in dept 20;
+select * from emp where deptno<>20;
+
+11)WAQ to display the result of record whose salary>30000.
+select * from emp where salary>30000;
+
+12)WAQ to display the result of record whose age is less than 30.
+select * from emp where age<30;
+
+13)WAQ to display name, salary,email,mbl no whose age is equals to 28 or greater than 28.
+select name,salary,email,mobileno from emp  whose age>=28;
+
+14)WAQ to display whose salary is less then or equals to 25000.
+select * from emp  where salary <=25000;
+
+LOGICAL OPERATORS :-
+
+15)WAQ to diaplay 
+
+
+

@@ -1,0 +1,10 @@
+<div class="col-md-8 float-left cazrd card-body">
+        <img src="{{movie.imgUrl}}" alt="" style="height: 550px;">
+        <h3 class="text-center">{{movie.name}}</h3>
+        <div [ngSwitch]=movie.name>
+    <p *ngSwitchCase="'Captain America'"><b style="font-size: 20px;">Rating: 10/10 </b> <br>After Steve Rogers decides to volunteer as a guinea pig in an experiment, his weak body is fully enhanced. A secret Nazi organisation tries to exploit the technology and he must stand against them.</p>
+    <p *ngSwitchCase="'Avengers'"><b style="font-size: 20px;">Rating: 5/10</b> <br> Deprived of his mighty hammer Mjolnir, Thor must escape the other side of the universe to save his home, Asgard, from Hela, the goddess of death.</p>
+    <p *ngSwitchCase="'Ironman'"><b style="font-size: 20px;">Rating: 9/10</b> <br> When an industrialist is captured, he constructs a high-tech armoured suit to escape. Once he manages to escape, he decides to use his suit to fight against evil forces and save the world.</p>
+    <p *ngSwitchCase="'Life of pi'"><b style="font-size: 20px;">Rating: 5/10</b> <br>Deprived of his mighty hammer Mjolnir, Thor must escape the other side of the universe to save his home, Asgard, from Hela, the goddess of death.</p>
+        </div>
+    </div>

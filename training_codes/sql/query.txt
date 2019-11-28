@@ -1,0 +1,118 @@
+1)WAQ to display all the employee details who is working department 20 as well as salary is greater than equals 25000.
+select * from emp where deptno=20 and salary >25000;
+
+2)WAQ to display main salary from the emp table who is working dept in 10 and 20.
+select salary from emp where deptno=10 and deptno=20;
+
+3)WAQ to display emp detail whose job designation is tester and age is equal to 25.
+select * from emp where designation='tester' and age=25;
+
+4)WAQ to display all the record of the employeewho is working as a tester or having salary more then 40000.
+select * from emp where designation='tester' or salary>40000;
+
+5)WAQ to display name sal age from the emp table who is working in deptno 10 or 40 or 50.
+SELECT * FROM EMP WHERE deptno=10 OR deptno=40 OR deptno=50; 
+
+6)WAQ to display emp details whose age greater then is 25 and bloodgroup is b+.
+select * from emp where age>25 or bloodgroup='B+';
+
+7)WAQ to display all the record of the empl excluding tester.
+select * from emp where not designation='tester';
+
+8)WAQ to display name of all emp who is working as a hr or tester and salary is greater then 40000.
+select name from emp where (designation ='hr' or designation ='tester' ) and salary>40000;
+
+9)WAQ to display all the employee excluding software developer who are working in deptno.40.
+select * from emp where  designation<>'software developer' and  deptno=40;
+
+10)WAQ to display all the software developer who are working for deptno 10 or 40.
+select * from emp where designation='software developer' and (deptno=10 or deptno=40);
+
+11)WAQ to display all the record of emp who are working in deptno 40,50,70,80.
+select * from emp where deptno in (40,50,70,80);
+
+12)WAQ to display name of all the emp who is working as a tester hr and testing  and admin.
+select * from emp where designation in ('hr','admin','tester');
+
+13)WAQ to display the detail of tester admin software developer who are working in deptno 20 or 30 and salary is greater rhen 40000.
+select * from emp where deptno in(20,30) and salary>40000 and designation in('tester','software developer','admin');
+
+14)WAQ to display all the record of emp excluding who is working as a tester admin hr.
+select * from emp where designation not in('tester','hr','admin'); 
+
+15)WAQ to display all the record of employee whose age is 20,25,30,40 exclude all the detail of tester and software developer.
+select * from emp where age in(20,25,30,40) and designation('software developer','tester');
+
+16)WAQ to display all the detail of employee whose age is between 20 to 40.
+select * from emp where age between 20 and 40;
+
+17)WAQ to display all the detail of emp who are hired during 2017 .
+select * from emp where doj between '2017-01-01' and '2017-12-31';
+
+18)WAQ to display all the record of the employ excluding whose salary is in the range 25000 to 30000.
+select * from emp where salary not between 25000 to 30000; 
+
+LIKE OPERATOR:-
+
+19)WAQ to display all the emp record whose name start with a.
+select * from emp where name like 'a%';
+
+20)WAQ to display name of the emp whose second character is i.
+select name from emp where name like '_i%';
+
+21)WAQ to display the name of the emp which has atleast two l in their name.
+select name from emp where name like '%l%l%';
+
+22)WAQ to display the name of emp whose name start with s and ends with p.
+select name from emp where name like 's%p';
+
+23)WAQ to display all the record of emp in the emp name begins with a or s.
+select * from emp where name like 'a%' or name like 's%';
+
+24)WAQ to display emp name salary whose working in department no. 10 30 20 and job designation start with s.
+select name,salary from emp where deptno in(10,20,30) and designation like 's%';
+
+MULTIROW FUNCTION:-
+
+25)WAQ to display all multi row function.
+select count(*) from emp;
+select avg(salary) from emp;
+select min(salary) from emp;
+select max(salary) from emp;
+select sum(salary) from emp;
+
+26)WAQ to display all the records and salary in asc order.
+select * from emp order by salary;
+
+SINGLE ROW SUBQUERY:-
+
+27)WAQ to display all the record of the employee whose date of joining is equal to rashi joining of date.
+select * from emp where doi=(select doi from table where name='Rashi');
+
+28)WAQ to display the second maximum salary.
+select max(salary) from emp <(select max(salary) from emp);
+
+29)WAQ to display name of the employee who is working in a location which has atleast one a in the location.
+select name from emp where deptno in(select deaptno from dept where location like '%a%');
+
+30)WAQ to display all the records of employee who is working in admin,operation,development.
+select * from emp where deptno in(select deptno from dept where dname in ('admin','operation','development'));
+
+31)WAQ to display the max sal of each dept.
+select max(salary) from emp group by deptno;
+
+32)WAQ to display the highest salary given to hr for each department.
+select max(salary) from emp where designation='hr' group by deptno;
+
+33)WAQ to display deptno which has atleast two  employe working.
+select deptno from emp group by deptno having count(*)>=2; 
+
+INSERT COMMAND:-insert into emp(eid,name,mobile_no,dob,age,doj,bloodgroup,deptno,salary,email,gender,designation) values(111,'pinky',3226222,'1997-09-12',21,'2019-09-12','A+',60,20000,'pinky@gmail.com','f','tester');
+
+
+34)WAQ to display 
+35)WAQ to display 
+30)WAQ to display 
+30)WAQ to display 
+30)WAQ to display 
+30)WAQ to display 

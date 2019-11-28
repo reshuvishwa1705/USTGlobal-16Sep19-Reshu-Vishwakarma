@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Named Function
+        function circum(n1){
+            console.log('Circumference of circle by Named Function is ',2*3.14*n1);
+        }
+        circum(2);
+        //Expression Function
+        var c=function(n2){
+            console.log('Circumference of circle by Expression Function is ',2*3.14*n2);  
+        }
+        c(4);
+        //Fat Arrow Function
+        var c1=(n3)=>{
+            console.log('Circumference of circle by Fat Arrow Function is ',2*3.14*n3);
+        }
+        c1(5);
+        //Self Invoking Function
+        (
+            function(n4){
+                console.log('Circumference of circle by Self Invoking Function is ',2*3.14*n4);
+            }
+        )(1);
+    </script>
+</body>
+</html>

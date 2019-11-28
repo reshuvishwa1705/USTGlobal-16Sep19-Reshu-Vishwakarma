@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       let arr=['book','reshu','cricket','chocklate','gift','date'];
+      arr.forEach(function(val,i){
+          console.log("Value= ",val)
+      });
+      console.log(Array.isArray(arr))
+      console.log(arr.includes('reshu',4));
+      console.log(arr.push('a'));
+      console.log(arr.pop());
+      console.log(arr.unshift('pic'))
+      console.log(arr.splice(0,1,'selfie'))
+      console.log(arr.slice(0,1));
+      console.log(arr.join('***'))
+      console.log(arr.indexOf('gift'));
+      let a=arr.map(function(val){
+          if(val.length>4)
+          return val;
+          else
+          return '___';
+          
+      });
+      console.log('By map Function',a);
+      let  a1=arr.filter(function(val){
+          if(val.length>4){
+              return true;
+          }
+          else
+          return false;
+      });
+      console.log("By filter Function ",a1)
+      //example2
+      let arr1=[10,80,60,44,66,88];
+      arr1.forEach(function(val,i){
+          console.log("Value= ",val)
+      });
+      console.log(Array.isArray(arr1))
+      console.log(arr1.includes('66',4));
+      console.log(arr1.push(99));
+      console.log(arr1.pop());
+      console.log(arr1.unshift(12))
+      console.log(arr1.splice(0,1,62))
+      console.log(arr1.slice(0,1));
+      console.log(arr1.join('*'))
+      console.log(arr1.indexOf(60));
+      let a2=arr1.map(function(val){
+         return val;
+          
+      });
+      console.log('By map Function',a2);
+      let  a3=arr1.filter(function(val){
+          if(val>40){
+              return true;
+          }
+          else
+          return false;
+      });
+      console.log("By filter Function ",a3)
+      //example3
+      let pen=['marker','montex','pentel','nataraj'];
+      pen.forEach(function(val,i){
+          console.log("Value= ",val)
+      });
+      console.log(Array.isArray(pen))
+      console.log(pen.includes('pentel',4));
+      console.log(pen.push('linc'));
+      console.log(pen.pop());
+      console.log(pen.unshift('gel'))
+      console.log(pen.splice(0,1,'ballpoint'))
+      console.log(pen.slice(0,1));
+      console.log(pen.join('='))
+      console.log(pen.indexOf('pentel'));
+      let a4=pen.map(function(val){
+          
+          return val;
+         
+          
+      });
+      console.log('By map Function',a4);
+      let  a5=pen.filter(function(val){
+          if(val.length>4){
+              return true;
+          }
+          else
+          return false;
+      });
+      console.log("By filter Function ",a5)
+      //example4
+      let book=['Java','SQL','JavaScript','ADA','Python'];
+      book.forEach(function(val,i){
+          console.log("Value= ",val)
+      });
+      console.log(Array.isArray(book))
+      console.log(book.includes('HTML',4));
+      console.log(book.push('HTML'));
+      console.log(book.pop());
+      console.log(book.unshift('CSS'))
+      console.log(arr.splice(0,1,'AngularJS'))
+      console.log(arr.slice(0,1));
+      console.log(arr.join('^^^'))
+      console.log(arr.indexOf('ADA'));
+      let a6=arr.map(function(val){
+          return val;
+          
+      });
+      console.log('By map Function',a6);
+      let  a7=arr.filter(function(val){
+          if(val.length>4){
+              return true;
+          }
+          else
+          return false;
+      });
+      console.log("By filter Function ",a7)
+      //example5
+      let sports=['footbal','bolleyball','cricket','chess','ludo'];
+      arr.forEach(function(val,i){
+          console.log("Value= ",val)
+      });
+      console.log(Array.isArray(sports))
+      console.log(sports.includes('ludo',4));
+      console.log(sports.push('badminton'));
+      console.log(sports.pop());
+      console.log(sports.unshift('tabletennis'))
+      console.log(sports.splice(0,1,'snake and ladder'))
+      console.log(sports.slice(0,1));
+      console.log(sports.join('&&&'))
+      console.log(sports.indexOf('chess'));
+      let a7=sports.map(function(val){
+        return val;  
+      });
+      console.log('By map Function',a7);
+      let  a8=sports.filter(function(val){
+          if(val.length>4){
+              return true;
+          }
+          else
+          return false;
+      });
+      console.log("By filter Function ",a8)
+      //example6
+      let choclate=['dairy milk','kitkat','munch','5star'];
+      choclate.forEach(function(val,i){
+          console.log("Value= ",val)
+      });
+      console.log(Array.isArray(choclate))
+      console.log(choclate.includes('munch',4));
+      console.log(choclate.push('mango bite'));
+      console.log(choclate.pop());
+      console.log(choclate.unshift('center fresh'))
+      console.log(choclate.splice(0,1,'eclairs'))
+      console.log(choclate.slice(0,1));
+      console.log(choclate.join('***'))
+      console.log(choclate.indexOf('5star'));
+      let a9=choclate.map(function(val){
+    return val;      
+      });
+      console.log('By map Function',a9);
+      let  a10=arr.filter(function(val){
+          if(val.length>4){
+              return true;
+          }
+          else
+          return false;
+      });
+      console.log("By filter Function ",a10)
+      //example7
+      let name=['reshu','divya','ranu','anushka'];
+      name.forEach(function(val,i){
+          console.log("Value= ",val)
+      });
+      console.log(Array.isArray(name))
+      console.log(name.includes('mani',2));
+      console.log(name.push('mani'));
+      console.log(name.pop());
+      console.log(name.unshift('piya'))
+      console.log(name.splice(0,1,'shubham'))
+      console.log(name.slice(0,1));
+      console.log(name.join('**'))
+      console.log(name.indexOf('ranu'));
+      let a11=name.map(function(val){
+         return val;
+          
+      });
+      console.log('By map Function',a11);
+      let  a12=name.filter(function(val){
+          if(val.length>4){
+              return true;
+          }
+          else
+          return false;
+      });
+      console.log("By filter Function ",a12)
+      //example8
+      let bike=['splendour','shine','avenger','apachi'];
+      bike.forEach(function(val,i){
+          console.log("Value= ",val)
+      });
+      console.log(Array.isArray(bike))
+      console.log(bike.includes('ktm',4));
+      console.log(bike.push('karizma'));
+      console.log(bike.pop());
+      console.log(bike.unshift('ktm'))
+      console.log(bike.splice(0,1,'honda'))
+      console.log(bike.slice(0,1));
+      console.log(bike.join('$$'))
+      console.log(bike.indexOf('shine'));
+      let a13=bike.map(function(val){
+         return val;
+      });
+      console.log('By map Function',a13);
+      let  a14=bike.filter(function(val){
+          if(val.length>4){
+              return true;
+          }
+          else
+          return false;
+      });
+      console.log("By filter Function ",a14)
+      //example9
+      let lapi=['lenevo','dell','hp','acer'];
+      lapi.forEach(function(val,i){
+          console.log("Value= ",val)
+      });
+      console.log(Array.isArray(lapi))
+      console.log(lapi.includes('hp',1));
+      console.log(lapi.push('compact'));
+      console.log(lapi.pop());
+      console.log(lapi.unshift('sony'))
+      console.log(lapi.splice(0,1,'asus'))
+      console.log(lapi.slice(0,1));
+      console.log(lapi.join('***'))
+      console.log(lapi.indexOf('dell'));
+      let a15=lapi.map(function(val){
+          return val;
+      });
+      console.log('By map Function',a15);
+      let  a16=lapi.filter(function(val){
+          if(val.length>4){
+              return true;
+          }
+          else
+          return false;
+      });
+      console.log("By filter Function ",a16)
+      //example10
+      let car=['fortuner','hexa','nano','baleno','audi'];
+      car.forEach(function(val,i){
+          console.log("Value= ",val)
+      });
+      console.log(Array.isArray(car))
+      console.log(car.includes('nano',4));
+      console.log(car.push('farari'));
+      console.log(car.pop());
+      console.log(car.unshift('tuv'))
+      console.log(car.splice(0,1,'xuv'))
+      console.log(car.slice(0,1));
+      console.log(car.join('@@'))
+      console.log(car.indexOf('hexa'));
+      let a17=car.map(function(val){
+          return val;
+          
+      });
+      console.log('By map Function',a17);
+      let  a17=car.filter(function(val){
+          if(val.length>4){
+              return true;
+          }
+          else
+          return false;
+      });
+      console.log("By filter Function ",a17)
+   </script> 
+</body>
+</html>
