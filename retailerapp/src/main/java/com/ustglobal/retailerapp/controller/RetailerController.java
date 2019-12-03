@@ -8,8 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
+import com.ustglobal.retailerapp.dto.OrderBean;
+import com.ustglobal.retailerapp.dto.ProductBean;
 import com.ustglobal.retailerapp.dto.RetailerBean;
 import com.ustglobal.retailerapp.service.RetailerServiceImpl;
 
@@ -93,4 +96,16 @@ public class RetailerController {
 
 		return "home";
 	}
+	@GetMapping("/search")
+	public String search(@RequestParam ("pid")int pid,ModelMap map) {
+		OrderBean bean = service.searchProduct(pid);
+		if(bean==null) {
+			map.addAttribute("msg","Data not found!!!");
+		}else {
+			map.addAttribute("bean",bean);
+
+		}
+		return "home";
+	}
+
 }

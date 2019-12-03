@@ -1,6 +1,7 @@
 package com.ustglobal.retailerapp.dao;
 
 import com.ustglobal.retailerapp.dto.OrderBean;
+import com.ustglobal.retailerapp.dto.ProductBean;
 import com.ustglobal.retailerapp.dto.RetailerBean;
 
 public interface RetailerDAO {

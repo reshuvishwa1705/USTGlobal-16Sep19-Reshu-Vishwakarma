@@ -30,8 +30,8 @@ public class RetailerImplDao implements RetailerDAO{
 			e.printStackTrace();
 			return false;
 		}
-		
-		
+
+
 	}
 
 	@Override
@@ -54,8 +54,15 @@ public class RetailerImplDao implements RetailerDAO{
 	@Override
 	public OrderBean searchProduct(int pid) {
 		EntityManager entityManager = factory.createEntityManager();
-		OrderBean bean = entityManager.find(OrderBean.class, pid);
-		return bean;
+		String jpql = "from ProductBean where pid=:id";
+		TypedQuery<ProductBean> query = entityManager.createQuery(jpql,ProductBean.class);
+		query.setParameter("id", pid);
+		ProductBean bean = query.getSingleResult();
+		String jpql2 = "from OrderBean where pname=:name";
+		TypedQuery<OrderBean> query2 = entityManager.createQuery(jpql2,OrderBean.class);
+		query2.setParameter("name", bean.getPname());
+		OrderBean bean2 = query2.getSingleResult();
+		return bean2;
 	}
 
 	@Override

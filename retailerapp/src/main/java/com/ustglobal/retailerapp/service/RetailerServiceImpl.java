@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.ustglobal.retailerapp.dao.RetailerImplDao;
 import com.ustglobal.retailerapp.dto.OrderBean;
+import com.ustglobal.retailerapp.dto.ProductBean;
 import com.ustglobal.retailerapp.dto.RetailerBean;
 @Service
 public class RetailerServiceImpl implements RetailerService{
