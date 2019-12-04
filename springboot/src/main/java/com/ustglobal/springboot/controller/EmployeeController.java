@@ -1,4 +1,4 @@
-package com.ustglobal.springrest.controller;
+package com.ustglobal.springboot.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ustglobal.springrest.dto.EmployeeBean;
-import com.ustglobal.springrest.dto.EmployeeResponse;
-import com.ustglobal.springrest.service.EmployeeService;
+import com.ustglobal.springboot.dto.EmployeeBean;
+import com.ustglobal.springboot.dto.EmployeeResponse;
+import com.ustglobal.springboot.service.EmployeeService;
 @RestController
 public class EmployeeController {
 	@Autowired
