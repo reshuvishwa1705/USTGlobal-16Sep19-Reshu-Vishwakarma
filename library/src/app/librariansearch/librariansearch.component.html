@@ -1,0 +1,23 @@
+<div class="alert alert-danger" *ngIf='msg'>{{msg}}</div>
+<input type="search" class="col-md-6 offset-3 form-control mt-5 " name="bid" id="bid" placeholder="Search"
+    (input)=booksearch($event)>
+<!-- <button class="btn btn-outline-primary float-right mt-2" type="submit" (click)=getbook(bauthor)>Search</button> -->
+
+<table class="table table-bordered table-hover mt-4">
+    <thead>
+        <th>Book Id</th>
+        <th>Subject Name</th>
+        <th>Book Author</th>
+        <th>Copies Of Book</th>
+        <th>Delete Book</th>
+    </thead>
+    <tbody>
+        <tr *ngFor='let book of books'>
+            <td>{{book.bid}}</td>
+            <td>{{book.bname}}</td>
+            <td>{{book.bauthor}}</td>
+            <td>{{book.bcopies}}</td>
+            <td><button class="btn btn-outline-primary" (click)='delete(book)'>Delete Book</button></td>
+        </tr>
+    </tbody>
+</table>

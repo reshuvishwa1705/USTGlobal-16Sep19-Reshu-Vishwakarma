@@ -1,0 +1,36 @@
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="alert alert-success" *ngIf='msg'>{{msg}}</div>
+<div class="col-md-4 offset-md-4 mt-5 card card-body">
+    <div class="card-header">
+        <h4>Add Book</h4>
+    </div>
+    <div class="card-body">
+        <form [formGroup]='addBookForm' (ngSubmit)='add(addBookForm)'>
+            <input type="number" name="bid" id="bid" class="form-control mb-3" formControlName="bid" autofocus
+                placeholder="Enter Book Id"><br>
+            <div *ngIf="bid.touched && bid.invalid">
+                <p *ngIf="bid.errors.required" class="text-danger" style="font-size: 15px;">*this feild is required</p>
+                <p *ngIf="bid.errors.pattern" class="text-danger" style="font-size: 15px;">*book id not exceed 7 digit numbers</p>
+            </div>
+            <input type="text" name="bname" id="bname" class="form-control mb-3" formControlName=bname
+                placeholder="Enter Book Name"><br>
+            <div *ngIf="bname.touched && bname.invalid">
+                <p *ngIf="bname.errors.required" class="text-danger" style="font-size: 15px;">*this feild is required</p>
+                <p *ngIf = "bname.errors.maxlength" class="text-danger" style="font-size: 15px;">*name cannot exceed 25 characters</p>
+                <!-- <p *ngIf = "email.errors.unique">*this email alredy exist</p> -->
+            </div>
+            <input type="text" name="bauthor" id="bauthor" class="form-control mb-3" formControlName=bauthor
+                placeholder="Enter Book Author Name"><br>
+            <div *ngIf="bauthor.touched && bauthor.invalid">
+                <p *ngIf="bauthor.errors.required" class="text-danger" style="font-size: 15px;">*this feild is required</p>
+            </div>
+            <input type="number" name="bcopies" id="bcopies" class="form-control mb-3" formControlName=bcopies
+                placeholder="Enter Copies of Book"><br>
+            <div *ngIf="bcopies.touched && bcopies.invalid">
+                <p *ngIf="bcopies.errors.required" class="text-danger" style="font-size: 15px;">*this feild is required</p>
+                <p *ngIf = "bcopies.errors.pattern" class="text-danger" style="font-size: 15px;">*book copies not exceed 7 digit numbers</p>
+            </div>
+            <button type="submit" class="float-right btn btn-dark" [disabled]=addBookForm.invalid>Add Book</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="alert alert-success" *ngIf='msg'>{{msg}}</div>
+<div class="col-md-4 offset-md-4 mt-5 card card-body">
+    <div class="card-header">
+        <h4>Register</h4>
+    </div>
+    <div class="card-body">
+        <form [formGroup]='addProductForm' (ngSubmit)='productAdd(addProductForm)'>
+            <input type="text" name="name" id="name" class="form-control mb-3" formControlName=name autofocus
+                placeholder="Enter Product Name"><br>
+            <div *ngIf="name.touched && name.invalid">
+                <p *ngIf="name.errors.required" class="text-danger" style="font-size: 15px;">*this feild is required</p>
+                <p *ngIf="name.errors.pattern" class="text-danger" style="font-size: 15px;">*name should not contain
+                    number and special character</p>
+                <p *ngIf="name.errors.maxlength" class="text-danger" style="font-size: 15px;">*name cannot exceed 25
+                    characters</p>
+            </div>
+            <input type="text" name="category" id="category" class="form-control mb-3" formControlName=category
+                placeholder="Enter Product Category"><br>
+            <div *ngIf="category.touched && category.invalid">
+                <p *ngIf="category.errors.required" class="text-danger" style="font-size: 15px;">*this feild is required
+                </p>
+                <p *ngIf="category.errors.pattern" class="text-danger" style="font-size: 15px;">*name should not contain
+                    number and special character</p>
+                <p *ngIf="category.errors.maxlength" class="text-danger" style="font-size: 15px;">*name cannot exceed 25
+                    characters</p>
+            </div>
+            <input type="text" name="company" id="company" class="form-control mb-3" formControlName=company
+                placeholder="Enter Product Company"><br>
+            <div *ngIf="company.touched && company.invalid">
+                <p *ngIf="company.errors.required" class="text-danger" style="font-size: 15px;">*this feild is required
+                </p>
+                <p *ngIf="company.errors.pattern" class="text-danger" style="font-size: 15px;">*name should not contain
+                    number and special character</p>
+                <p *ngIf="company.errors.maxlength" class="text-danger" style="font-size: 15px;">*name cannot exceed 25
+                    characters</p>
+            </div>
+            <input type="number" name="quantity" id="quantity" class="form-control mb-3" formControlName=quantity
+                placeholder="Enter Product Quantity"><br>
+            <div *ngIf="quantity.touched && quantity.invalid">
+                <p *ngIf="quantity.errors.required" class="text-danger" style="font-size: 15px;">*this feild is required
+                </p>
+                <p *ngIf="quantity.errors.pattern" class="text-danger" style="font-size: 15px;">*it only contain numbers
+                </p>
+            </div>
+            <input type="number" name="price" id="price" class="form-control mb-3" formControlName="price"
+                placeholder="Enter Product Price"><br>
+            <div *ngIf="price.touched && price.invalid">
+                <p *ngIf="price.errors.required" class="text-danger" style="font-size: 15px;">*this feild is required
+                </p>
+                <!-- <p *ngIf="price.errors.pattern" class="text-danger" style="font-size: 15px;">* it only contain numbers
+                </p> -->
+            </div>
+            <button type="submit" class="float-right btn btn-dark" >AddProduct</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<h3 class="mt-2" style="text-align:center;">List Of Book</h3>
+<table class="table table-bordered table-hover mt-4">
+    <thead>
+        <th>Book Id</th>
+        <th>Subject Name</th>
+        <th>Book Author</th>
+        <th>Copies Of Book</th>
+        <th>Delete Book</th>
+        <th>Update Book</th>
+    </thead>
+    <tbody>
+        <tr *ngFor='let book of value'>
+            <td>{{book.bid}}</td>
+            <td>{{book.bname}}</td>
+            <td>{{book.bauthor}}</td>
+            <td>{{book.bcopies}}</td>
+            <td><button class="btn btn-outline-danger" (click)='delete(book)'>Delete Book</button></td>
+            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                    (click)="selectUser(book)">
+                    Update
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" *ngIf="selectedUser">
+                                <form action="" class="" #form="ngForm" (ngSubmit)="updateData(form)">
+                                    <h1 class="text-center bg-dark text-white">Update Book</h1>
+                                    <!-- <input type="hidden" name='bid' #bid="ngModel" ngModel
+                                        [(ngModel)]="selectedUser.bid"> -->
+                                    <div class="form-group">
+                                        <input type="number" name="bid" id="bid" class="form-control"
+                                            placeholder="Enter book id..." required #bid="ngModel" ngModel
+                                            [(ngModel)]="selectedUser.bid">
+                                        <div *ngIf="bid.touched && bid.invalid">
+                                            <p class="alert alert-danger" *ngIf="bid.errors.required">This field is
+                                                required</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="bname" id="bname" class="form-control"
+                                            placeholder="Enter book name..." required #bname="ngModel" ngModel
+                                            [(ngModel)]="selectedUser.bname">
+                                        <div *ngIf="bname.touched && bname.invalid">
+                                            <p class="alert alert-danger" *ngIf="bname.errors.required">This field
+                                                is
+                                                required</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="bauthor" id="bauthor" class="form-control"
+                                            placeholder="Enter book author..." required #bauthor="ngModel" ngModel
+                                            [(ngModel)]="selectedUser.bauthor">
+                                        <div *ngIf="bauthor.touched && bauthor.invalid">
+                                            <p class="alert alert-danger" *ngIf="bauthor.errors.required">This field is
+                                                required</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" name="bcopies" id="bcopies" class="form-control"
+                                            placeholder="Enter book of copies..." required #bcopies="ngModel" ngModel
+                                            [(ngModel)]="selectedUser.bcopies">
+                                        <div *ngIf="bcopies.touched && bcopies.invalid">
+                                            <p class="alert alert-danger" *ngIf="bcopies.errors.required">This field is
+                                                required</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-outline-success float-right"
+                                            [disabled]="form.invalid">Update</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="alert alert-danger" *ngIf='msg'>{{msg}}</div>

@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand">Library Management</a>
+  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" *ngIf='isLoggedIn()' routerLink="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" *ngIf='isLoggedIn() && isStudent()'>
+        <a class="nav-link" routerLink="/studentsearch">Search <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" *ngIf='isLoggedIn() && isLibrarian()'>
+        <a class="nav-link" routerLink="/librariansearch">SearchBook<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" *ngIf='isLoggedIn() && isLibrarian()'>
+        <a class="nav-link" routerLink="/addbook">Add Book<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" *ngIf='isLoggedIn() && isLibrarian()'>
+        <a class="nav-link" routerLink="/booklist">ListOfBook<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngIf='!isLoggedIn()'>
+        <a class="nav-link" routerLink="/register">Register</a>
+      </li>
+      <li class="nav-item" *ngIf='!isLoggedIn()'>
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li  class="nav-item active" *ngIf='isLoggedIn() && isStudent()'>
+        <a class="nav-link" routerLink="/changepassword">ChangePassword</a>
+      </li>
+      <li class="nav-item" *ngIf='isLoggedIn()'>
+        <button class="btn btn-outline-light" (click)='logout()'>Logout</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<body>
+  <h3 style="font-family: Arial, Helvetica, sans-serif; text-align: center; margin-top: 60px;" *ngIf='!isLoggedIn()'>Welcome To Library Management System</h3>
+</body>

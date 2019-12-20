@@ -1,0 +1,23 @@
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="alert alert-danger" *ngIf='msg'>{{msg}}</div>
+<div class="col-md-4 offset-md-4 mt-5 card card-body">
+    <div class="card-header">
+        <h4>Login</h4>
+    </div>
+    <form [formGroup]='loginForm' (ngSubmit)='login(loginForm)'>
+        <input type="email" name="email" id="email" placeholder="Enter Email" formControlName=email
+            class="form-control mb-3">
+        <div *ngIf="email.touched && email.invalid">
+            <p *ngIf="email.errors.required" class="text-danger">*this feild is required</p>
+            <p *ngIf="email.touched && email.hasError('email')" class="text-danger"  style="font-size: 15px;">*email is invalid</p>
+        </div>
+        <input type="password" name="password" id="password" placeholder="Enter Passsword" formControlName=password
+            class="form-control mb-3">
+        <div *ngIf="password.touched && password.invalid">
+            <p *ngIf="password.errors.required" class="text-danger">*this feild is required</p>
+            <!-- <p *ngIf="password.errors.pattern" class="text-danger"style="font-size: 10px;">*Password should contain atleast one underscore special character,number,upperccase,lowercase</p> -->
+        </div>
+
+        <button class="btn btn-outline-dark" type="submit" [disabled]=loginForm.invalid>Login</button>
+    </form>
+</div>
