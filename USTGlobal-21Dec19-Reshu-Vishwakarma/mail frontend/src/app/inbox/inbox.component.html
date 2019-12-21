@@ -1,0 +1,21 @@
+<table class="table table-bordered table-striped table-dark col-md-8 offset-2">
+    <thead>
+        <tr>
+            <th>mail Id</th>
+            <th>from</th>
+            <th style="width: 500px;">subject</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let mail of mails">
+            <td>{{mail.mid}}</td>
+            <td>{{mail.email}}</td>
+            <td>{{mail.subject}}</td>
+            <td>
+                <button (click)="deleteData(mail)" type="button" class="btn btn-outline-danger">DELETE</button>
+            </td>
+        </tr>
+    </tbody>
+    
+</table>
