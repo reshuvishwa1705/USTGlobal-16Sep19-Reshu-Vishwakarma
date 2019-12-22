@@ -14,12 +14,16 @@ export class UpdateproductComponent implements OnInit {
   value: any;
   msg: string;
   updateProductForm = new FormGroup({
+    pid: new FormControl('', [Validators.required, Validators.pattern('/^-?(0|[1-9]\d*)?$/')]),
     name: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z" "]+$'), Validators.maxLength(25)]),
     category: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z " "]+$')]),
     company: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z " "]+$')]),
     quantity: new FormControl('', [Validators.required, Validators.pattern('/^-?(0|[1-9]\d*)?$/')]),
     price: new FormControl('', [Validators.required, Validators.pattern('/^-?(0|[1-9]|[.]\d*)?$/')])
     });
+    get pid() {
+      return this.updateProductForm.get('pid');
+    }
     get name() {
       return this.updateProductForm.get('name');
     }

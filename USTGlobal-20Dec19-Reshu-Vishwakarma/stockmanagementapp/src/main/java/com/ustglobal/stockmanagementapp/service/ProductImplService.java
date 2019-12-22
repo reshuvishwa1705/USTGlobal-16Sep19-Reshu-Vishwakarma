@@ -46,4 +46,9 @@ public class ProductImplService implements ProductService{
 		return dao.generateBill(beans);
 	}
 
+	@Override
+	public List<ProductBean> getAllProduct() {
+		return dao.getAllProduct();
+	}
+
 }

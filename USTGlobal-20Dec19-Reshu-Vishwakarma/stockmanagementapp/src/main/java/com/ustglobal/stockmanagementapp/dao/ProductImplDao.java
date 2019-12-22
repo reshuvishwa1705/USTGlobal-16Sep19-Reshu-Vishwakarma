@@ -1,6 +1,5 @@
 package com.ustglobal.stockmanagementapp.dao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -87,13 +86,9 @@ public class ProductImplDao implements ProductDAO{
 	public boolean modifyProduct(ProductBean bean) {
 		EntityManager manager = factory.createEntityManager();
 		EntityTransaction transaction = manager.getTransaction();
-		String jpql = "from ProductBean where name=:name";
-		TypedQuery<ProductBean> query = manager.createQuery(jpql, ProductBean.class);
-		query.setParameter("name", bean.getName());
 		transaction.begin();
 		try {
-			ProductBean bean2 = query.getSingleResult();
-			ProductBean productBean = manager.find(ProductBean.class, bean2.getPid());
+			ProductBean productBean = manager.find(ProductBean.class, bean.getPid());
 			productBean.setName(bean.getName());
 			productBean.setCategory(bean.getCategory());
 			productBean.setCompany(bean.getCompany());
@@ -140,6 +135,15 @@ public class ProductImplDao implements ProductDAO{
 		bean.setQuantity(qty);
 		bean.setName(pname);
 		return bean;
+	}
+
+	@Override
+	public List<ProductBean> getAllProduct() {
+	 EntityManager manager  = factory.createEntityManager();
+	 String jpql = "from ProductBean";
+	 TypedQuery<ProductBean> query = manager.createQuery(jpql,ProductBean.class);
+	 List<ProductBean> beans = query.getResultList();
+	 return beans;
 	}
 
 }

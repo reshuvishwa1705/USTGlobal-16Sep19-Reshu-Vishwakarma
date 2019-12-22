@@ -1,5 +1,6 @@
 package com.ustglobal.stockmanagementapp.controller;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class StockController {
 			response.setStatusCode(201);
 			response.setMessage("Success");
 			response.setDescription("Product Found");
-			response.setBean(bean);
+			response.setBeans(Arrays.asList(bean));
 		}
 		else {
 			response.setStatusCode(401);
@@ -108,21 +109,39 @@ public class StockController {
 		return response;
 	}
 
-	@GetMapping(path = "/generate",produces = MediaType.APPLICATION_JSON_VALUE)
-	public StockResponse generateBill(List<ProductBean> beans) {
+	@PostMapping(path="/generate", consumes = MediaType.APPLICATION_JSON_VALUE,
+			produces = MediaType.APPLICATION_JSON_VALUE)
+	public StockResponse generateBill(@RequestBody List<ProductBean> beans) {
 		StockResponse response = new StockResponse();
 		ProductBean bean = productService.generateBill(beans);
 		if(bean!=null) {
 			response.setStatusCode(201);
 			response.setMessage("Success");
 			response.setDescription("Product Updated");
-			response.setBean(bean);		
+			response.setBeans(Arrays.asList(bean));		
 
 		}
 		else {
 			response.setStatusCode(401);
 			response.setMessage("Failure");
 			response.setDescription("Product Not Updated");
+		}
+		return response;
+	}//end of generateBill
+	@GetMapping(path="/getall",produces = MediaType.APPLICATION_JSON_VALUE)
+	public StockResponse getAllProduct() {
+		StockResponse response = new StockResponse();
+		List<ProductBean> beans = productService.getAllProduct();
+		if(!beans.isEmpty()) {
+			response.setStatusCode(201);
+			response.setMessage("Success");
+			response.setDescription("Product Found");
+			response.setBeans(beans);
+		}
+		else {
+			response.setStatusCode(401);
+			response.setMessage("Failure");
+			response.setDescription("Product Not Found");
 		}
 		return response;
 	}

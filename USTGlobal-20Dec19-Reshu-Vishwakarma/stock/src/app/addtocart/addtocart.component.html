@@ -1,8 +1,6 @@
 <div class="alert alert-danger" *ngIf='error'>{{error}}</div>
 <div class="alert alert-danger" *ngIf='msg'>{{msg}}</div>
-<input type="search" class="col-md-6 offset-3 form-control mt-5 " name="category" id="category" placeholder="Search Product By Category"
-    (input)=getProductByCategory($event)>
-
+<button class="btn btn-outline-danger" (click)='getAll()'>ShowAllProduct</button>
 <table class="table table-bordered table-hover mt-4">
     <thead>
         <th>Product Id</th>
@@ -10,7 +8,7 @@
         <th>Product Quantity</th>
         <th>Product Category</th>
         <th>Product Company</th>
-        <th>Update Product</th>
+        <th>Add to Cart</th>
     </thead>
     <tbody>
         <tr *ngFor='let prod of value'>
@@ -19,7 +17,7 @@
             <td>{{prod.quantity}}</td>
             <td>{{prod.category}}</td>
             <td>{{prod.company}}</td>
-            <td><a href="/update">Update Product</a></td>     
+            <td><button class="btn btn-outline-primary" (click)='addToCart(prod)'>Add to Cart</button></td> 
         </tr>
     </tbody>
 </table>

@@ -12,4 +12,5 @@ public interface ProductDAO {
 	public boolean modifyProduct(ProductBean bean);
 //	public List<ProductBean> addProductToCart(ProductBean bean);
 	public ProductBean generateBill(List<ProductBean> beans);
+	public List<ProductBean> getAllProduct();
 }

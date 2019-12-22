@@ -11,6 +11,7 @@ import { SearchproductbycategoryComponent } from './searchproductbycategory/sear
 import { SearchproductbycompanyComponent } from './searchproductbycompany/searchproductbycompany.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddtocartComponent } from './addtocart/addtocart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UpdateproductComponent,
     SearchproductbynameComponent,
     SearchproductbycategoryComponent,
-    SearchproductbycompanyComponent
+    SearchproductbycompanyComponent,
+    AddtocartComponent
   ],
   imports: [
     BrowserModule,

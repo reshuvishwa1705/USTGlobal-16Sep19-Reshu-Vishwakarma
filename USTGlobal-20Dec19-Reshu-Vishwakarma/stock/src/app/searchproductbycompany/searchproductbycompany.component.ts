@@ -11,20 +11,16 @@ export class SearchproductbycompanyComponent implements OnInit {
   error: string;
   value: string;
   msg: string;
-  i = 1;
   getProductByCompany(event) {
     this.error = null;
     this.value = event.target.value;
     this.auth.getCompany(this.value).subscribe(res => {
       console.log(res);
-      // this.value = res.beans;
+      this.value = res.beans;
+      this.msg = res.description;
     }, err => {
       this.error = err.message;
     });
-  }
-  addToCart(prod){
-    localStorage.setItem("product"+this.i , prod);
-    this.i++;
   }
   ngOnInit() {
   }

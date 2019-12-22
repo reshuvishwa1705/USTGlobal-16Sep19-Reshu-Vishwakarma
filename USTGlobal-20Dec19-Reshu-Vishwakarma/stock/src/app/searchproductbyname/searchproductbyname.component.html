@@ -10,17 +10,15 @@
         <th>Product Quantity</th>
         <th>Product Category</th>
         <th>Product Company</th>
-        <th>Add to Cart</th>
         <th>Update Product</th>
     </thead>
     <tbody>
         <tr *ngFor='let prod of value'>
-            <td>{{product.pid}}</td>
-            <td>{{product.name}}</td>
-            <td>{{product.quantity}}</td>
-            <td>{{product.category}}</td>
-            <td>{{product.company}}</td>
-            <td><button class="btn btn-outline-primary" (click)='addToCart(prod)'>Add to Cart</button></td>
+            <td>{{prod.pid}}</td>
+            <td>{{prod.name}}</td>
+            <td>{{prod.quantity}}</td>
+            <td>{{prod.category}}</td>
+            <td>{{prod.company}}</td>
             <td><a href="/update">Update Product</a></td>    
         </tr>
     </tbody>

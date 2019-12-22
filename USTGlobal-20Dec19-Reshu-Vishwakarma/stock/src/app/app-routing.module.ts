@@ -5,6 +5,7 @@ import { SearchproductbynameComponent } from './searchproductbyname/searchproduc
 import { SearchproductbycategoryComponent } from './searchproductbycategory/searchproductbycategory.component';
 import { SearchproductbycompanyComponent } from './searchproductbycompany/searchproductbycompany.component';
 import { UpdateproductComponent } from './updateproduct/updateproduct.component';
+import { AddtocartComponent } from './addtocart/addtocart.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'name', component: SearchproductbynameComponent},
   {path: 'category', component: SearchproductbycategoryComponent},
   {path: 'company', component: SearchproductbycompanyComponent},
-  {path: 'update', component: UpdateproductComponent}
+  {path: 'update', component: UpdateproductComponent},
+  {path: 'cart', component: AddtocartComponent}
 ];
 
 @NgModule({

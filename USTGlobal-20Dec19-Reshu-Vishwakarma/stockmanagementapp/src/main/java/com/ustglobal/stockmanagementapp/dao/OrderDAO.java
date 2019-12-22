@@ -1,5 +1,7 @@
 package com.ustglobal.stockmanagementapp.dao;
 
-public interface OrderDAO {
+import com.ustglobal.stockmanagementapp.dto.OrderBean;
 
+public interface OrderDAO {
+public boolean addOrder(OrderBean bean);
 }

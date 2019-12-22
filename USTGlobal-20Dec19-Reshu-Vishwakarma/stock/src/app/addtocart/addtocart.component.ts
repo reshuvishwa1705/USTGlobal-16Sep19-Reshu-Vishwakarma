@@ -2,19 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 
 @Component({
-  selector: 'app-searchproductbycategory',
-  templateUrl: './searchproductbycategory.component.html',
-  styleUrls: ['./searchproductbycategory.component.css']
+  selector: 'app-addtocart',
+  templateUrl: './addtocart.component.html',
+  styleUrls: ['./addtocart.component.css']
 })
-export class SearchproductbycategoryComponent implements OnInit {
+export class AddtocartComponent implements OnInit {
+
   constructor(private auth: AuthService) { }
   error: string;
   value: string;
   msg: string;
-  getProductByCategory(event) {
+  arr: any;
+  i = 1;
+  getAll(){
     this.error = null;
-    this.value = event.target.value;
-    this.auth.getCategory(this.value).subscribe(res => {
+    this.auth.getAllProduct().subscribe(res => {
       console.log(res);
       this.value = res.beans;
       this.msg = res.description;
@@ -22,7 +24,11 @@ export class SearchproductbycategoryComponent implements OnInit {
       this.error = err.message;
     });
   }
- 
+  addToCart(prod) {
+    localStorage.setItem('product'+ this.i, prod);
+    this.msg = 'add product in cart';
+    this.i++;
+  }
   ngOnInit() {
   }
 
